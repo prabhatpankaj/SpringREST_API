@@ -49,7 +49,7 @@ public class UserManagement {
                 return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
 	}
 	
-	@PutMapping("user")
+	@PutMapping("user/{id}")
 	public ResponseEntity<User> updateUser(@RequestBody User user) {
 		userService.updateUser(user);
 		return new ResponseEntity<User>(user, HttpStatus.OK);
